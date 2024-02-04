@@ -33,3 +33,22 @@ Once dependencies are installed and the database is configured, start the applic
 ```
 > node server.js
 ```
+
+### Preview
+
+- Search By Content
+ ![alt text](https://github.com/latifis/etc/blob/main/simple-node-postgresql/search-by-content.png?raw=true)
+ - Search Without Content
+ ![alt text](https://github.com/latifis/etc/blob/main/simple-node-postgresql/search-without-content.png?raw=true)
+ - With Special Character
+ ![alt text](https://github.com/latifis/etc/blob/main/simple-node-postgresql/with-special-character.png?raw=true)
+ - Excess Character
+ ![alt text](https://github.com/latifis/etc/blob/main/simple-node-postgresql/excess-character.png?raw=true)
+ - Header Requirements
+ ![alt text](https://github.com/latifis/etc/blob/main/simple-node-postgresql/header-requirements.png?raw=true)
+
+### API Documentation
+To view documentation for using this program, you can go to the [documentation](https://documenter.getpostman.com/view/19724773/2s9Yywddwf), or at the following link:
+```
+https://documenter.getpostman.com/view/19724773/2s9Yywddwf
+```
