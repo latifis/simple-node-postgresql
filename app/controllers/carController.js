@@ -25,8 +25,34 @@ exports.findAllWithFilter = (req, res) => {
 
   Car.findAll({ where: condition })
     .then((data) => {
+      // Required header checking
+      const expectedHeaders = {
+        "apikey": "7def4ec4deab71e2c5911ee7181c8bf077582e9cc397af95c76fb0d459f0",
+        "x-content-type-option": "nosniff",
+        "x-xss-protection": "1; mode=block",
+        "strict-transport-security":
+          "max-age=31536000; includeSubDomains; preload",
+        "x-frame-option": "SAMEORIGIN",
+      };
+      
+      for (const header in expectedHeaders) {
+        if (
+          !req.headers[header] ||
+          req.headers[header] !== expectedHeaders[header]
+        ) {
+          res.send({
+            OUT_STAT: "F",
+            OUT_MESS: "You do not have permission to access the API",
+          });
+          return;
+        }
+      }
+
       // Maximum character length checking
-      if (!req.body.getListFilterUnitBrand.p_search && req.body.getListFilterUnitBrand.p_search.length > 10) {
+      if (
+        !req.body.getListFilterUnitBrand.p_search &&
+        req.body.getListFilterUnitBrand.p_search.length > 10
+      ) {
         res.send({
           OUT_STAT: "F",
           OUT_MESS: "Invalid Input",
