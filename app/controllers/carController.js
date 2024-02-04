@@ -50,7 +50,7 @@ exports.findAllWithFilter = (req, res) => {
 
       // Maximum character length checking
       if (
-        !req.body.getListFilterUnitBrand.p_search &&
+        req.body.getListFilterUnitBrand.p_search &&
         req.body.getListFilterUnitBrand.p_search.length > 10
       ) {
         res.send({
