@@ -16,10 +16,20 @@ https://github.com/latifis/simple-node-postgresql
 
 ### Installing And Running
 1. Instalation
+
+To install dependencies, run the following command in your terminal or command prompt:
 ```
 > npm install
 ```
-2. Running Program
+2. Setup Database
+
+After installing dependencies, you need to configure the database settings. Open the `config` file and configure it according to the database you are using:
+```
+app/config/dbConfig.js
+```
+3. Running The Program
+
+Once dependencies are installed and the database is configured, start the application with the following command:
 ```
 > node server.js
 ```
